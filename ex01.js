@@ -78,13 +78,58 @@ estadosNe.push(estado7)
 estadosNe.push(estado8)
 estadosNe.push(estado9)
 
-estadosNe.forEach(function(nome)){
-    console.log(nome)
-}
 
+estadosNe.forEach(function(dados){
+    console.log(dados)
+})
+
+// --------------------------------------------------
 // #2
 
-let densidade = {
-
-    densidade = populacao/area
+let demografica = function(populacao,area){
+    return populacao/area
 }
+
+// --------------------------------------------------
+//#3
+
+for (i = 0; i < estadosNe.length; i++){
+    estadosNe[i]["Densidade demográfica"] = (demografica(estadosNe[i].area,estadosNe[i].populacao))
+    delete estadosNe[i].sigla
+    console.log(estadosNe[i])
+}
+
+// -------------------------------------------------
+//#4
+
+let nordeste = (estadosNe) =>{
+    for(i in estadosNe){
+        console.log(i, estadosNe[i])
+    }
+}
+
+//--------------------------------------------------
+// #5
+
+for(let i of estadosNe){
+    nordeste(i)
+    console.log(nordeste)
+}
+
+// --------------------------------------------------
+// #6
+
+let nomesNE = []
+
+nomesNE.push(estado3.nome);
+nomesNE.unshift(estado7.nome);
+nomesNE.splice(8, 0, estado1.nome);
+nomesNE.splice(2, 0, estado4.nome);
+nomesNE.splice(3, 0, estado6.nome);
+nomesNE.splice(4, 0, estado8.nome);
+nomesNE.splice(5, 0, estado2.nome);
+nomesNE.splice(6, 0, estado9.nome);
+nomesNE.splice(7, 0, estado5.nome)
+
+
+console.log(nomesNE)
