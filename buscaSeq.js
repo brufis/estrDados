@@ -1,6 +1,6 @@
 // Importar um vetor com mais de 100k de nomes
 
-const nomes = require('./dados/vetor-nomes')
+const nomes = require('./Dados/vetor-nomes')
 
 // Busca do nome BRUNA
 
